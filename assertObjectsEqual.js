@@ -10,7 +10,7 @@ const assertObjectsEqual = function(actual, expected) {
       if (actual[element].length !== expected[element].length) {
         temp = false;
       }
-      for (let j = 0; j < element.length; j++){
+      for (let j = 0; j < actual[element].length; j++){
         if (actual[element][j] != expected[element][j]){
           temp = false;
         }
