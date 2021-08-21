@@ -22,14 +22,15 @@ const eqArrays = function(arrayOne, arrayTwo) {
 const letterPositions = function(sentence) {
   const results = {};
   // logic to update results here
-  for (letter of sentence) {
-    if (results[letter]) {
-      results[letter] ++;
-    }
-    else {
-    results[letter] = 1;
+  for (letter in sentence) {
+    if (!results[sentence[letter]]) {
+      results[sentence[letter]]  = [];
+      results[sentence[letter]].push(Number(letter));
+    } else {
+      results[sentence[letter]].push(Number(letter));
     }
   }
+  console.log(results);
   return results;
 };
 
